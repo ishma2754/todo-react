@@ -9,9 +9,9 @@ function TodoList({todo}) {
   function handleEdit(){
     if(isEditable){
       updateTodo(todo.id, {...todo, task: task})
+      setIsEditable(false)
 
-    }
-    setIsEditable((prev) => !prev)
+    }else setIsEditable((prev) => !prev)
   }
 
   function removeTodo() {
